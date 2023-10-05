@@ -37,7 +37,7 @@ const Navbar = () => {
                     variant: 'ghost',
                     size: 'sm',
                   })}>
-                  Pricing
+                  Subscribe
                 </Link>
                 <LoginLink
                   className={buttonVariants({

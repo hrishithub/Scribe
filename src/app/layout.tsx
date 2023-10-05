@@ -9,6 +9,7 @@ import Providers from '@/components/Provider'
 import 'react-loading-skeleton/dist/skeleton.css'
 import { Toaster } from '@/components/ui/toaster'
 import 'simplebar-react/dist/simplebar.min.css'
+import { CrispProvider } from '@/components/crisp-provider'
 
 
 const inter = Inter({ subsets: ['latin'] })
@@ -25,7 +26,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <Providers>                                                  
+
+      <Providers>  
+     
+       <CrispProvider />
+                                        
       <body  className={cn('min-h-screen font-sans antialiased ',inter.className )}>  
      
       <ThemeProvider 
