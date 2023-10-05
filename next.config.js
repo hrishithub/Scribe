@@ -1,8 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = { 
-  // images: {
-	// 	domains: ["lh3.googleusercontent.com"], // Add the lh3.googleusercontent.com domain here
-	// },
+  images: {
+		domains: ["lh3.googleusercontent.com"], // Add the lh3.googleusercontent.com domain here
+	},
     async redirects() {
       return [
         {
