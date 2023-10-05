@@ -29,6 +29,7 @@ const Navbar = () => {
 
           <div className='hidden items-center space-x-4 sm:flex'>
             
+          {!user ? (
               <>
                 <Link
                   href='/pricing'
@@ -36,15 +37,7 @@ const Navbar = () => {
                     variant: 'ghost',
                     size: 'sm',
                   })}>
-                  Subscribe
-                </Link>
-                <Link
-                  href='/dashboard'
-                  className={buttonVariants({
-                    variant: 'ghost',
-                    size: 'sm',
-                  })}>
-                  Dashboard
+                  Pricing
                 </Link>
                 <LoginLink
                   className={buttonVariants({
@@ -52,8 +45,7 @@ const Navbar = () => {
                     size: 'sm',
                   })}>
                   Sign in
-                </LoginLink> 
-                <ModeToggle/>
+                </LoginLink>
                 <RegisterLink
                   className={buttonVariants({
                     size: 'sm',
@@ -62,11 +54,18 @@ const Navbar = () => {
                   <ArrowRight className='ml-1.5 h-5 w-5' />
                 </RegisterLink>
               </>
-           
+            ) : (
               <>
-                
+                <Link
+                  href='/dashboard'
+                  className={buttonVariants({
+                    variant: 'ghost',
+                    size: 'sm',
+                  })}>
+                  Dashboard
+                </Link>
 
-                {/* <UserAccountNav
+                <UserAccountNav
                   name={
                     !user.given_name || !user.family_name
                       ? 'Your Account'
@@ -74,9 +73,11 @@ const Navbar = () => {
                   }
                   email={user.email ?? ''}
                   imageUrl={user.picture ?? ''}
-                
-                />  */}
+                />
               </>
+            )}
+           
+             
             
           </div>
         </div>
