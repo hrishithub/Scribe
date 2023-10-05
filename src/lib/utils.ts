@@ -16,7 +16,7 @@ export function absoluteUrl(path: string) {
 }
 
 export function constructMetadata({
-  title = "Scribe - the SaaS for students",
+  title = "Scribe",
   description = "Scribe is an open-source software to make chatting to your PDF files easy.",
   image = "/thumbnail.png",
   icons = "/favicon.ico",
@@ -48,7 +48,7 @@ export function constructMetadata({
       creator: "@hrishistwt"
     },
     icons,
-    metadataBase: new URL('https://quill-jet.vercel.app'),
+    metadataBase: new URL('https://scribe-blue.vercel.app'),
     themeColor: '#FFF',
     ...(noIndex && {
       robots: {

@@ -2,7 +2,6 @@
 
 import { ArrowRight, Menu } from 'lucide-react'
 import Link from 'next/link'
-import { ModeToggle } from './mode-toggle'
 import { usePathname } from 'next/navigation'
 import { useEffect, useState } from 'react'
 
@@ -15,7 +14,7 @@ const MobileNav = ({ isAuth }: { isAuth: boolean }) => {
 
   useEffect(() => {
     if (isOpen) toggleOpen()
-  }, [pathname,isOpen])
+  }, [pathname])
 
   const closeOnCurrent = (href: string) => {
     if (pathname === href) {
@@ -88,10 +87,6 @@ const MobileNav = ({ isAuth }: { isAuth: boolean }) => {
                     href='/sign-out'>
                     Sign out
                   </Link>
-                </li> 
-                <li className='my-3 h-px w-full bg-gray-300' />
-                <li> 
-                <ModeToggle/>
                 </li>
               </>
             )}

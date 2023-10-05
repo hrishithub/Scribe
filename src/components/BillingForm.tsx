@@ -3,7 +3,7 @@
 import { getUserSubscriptionPlan } from '@/lib/stripe'
 import { useToast } from './ui/use-toast'
 import { trpc } from '@/app/_trpc/client'
-import MaxWidthWrapper from './maxWidthWrapper'
+import MaxWidthWrapper from './MaxWidthWrapper'
 import {
   Card,
   CardDescription,
@@ -45,7 +45,7 @@ const BillingForm = ({
       <form
         className='mt-12'
         onSubmit={(e) => {
-          e.preventDefault() //to prevent default submission of form
+          e.preventDefault()
           createStripeSession()
         }}>
         <Card>
