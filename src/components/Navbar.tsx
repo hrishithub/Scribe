@@ -38,6 +38,14 @@ const Navbar = () => {
                   })}>
                   Subscribe
                 </Link>
+                <Link
+                  href='/dashboard'
+                  className={buttonVariants({
+                    variant: 'ghost',
+                    size: 'sm',
+                  })}>
+                  Dashboard
+                </Link>
                 <LoginLink
                   className={buttonVariants({
                     variant: 'ghost',
@@ -56,16 +64,9 @@ const Navbar = () => {
               </>
            
               <>
-                <Link
-                  href='/dashboard'
-                  className={buttonVariants({
-                    variant: 'ghost',
-                    size: 'sm',
-                  })}>
-                  Dashboard
-                </Link>
+                
 
-                <UserAccountNav
+                {/* <UserAccountNav
                   name={
                     !user.given_name || !user.family_name
                       ? 'Your Account'
@@ -74,7 +75,7 @@ const Navbar = () => {
                   email={user.email ?? ''}
                   imageUrl={user.picture ?? ''}
                 
-                /> 
+                />  */}
               </>
             
           </div>
