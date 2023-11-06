@@ -37,7 +37,7 @@ const Navbar = () => {
                     variant: 'ghost',
                     size: 'sm',
                   })}>
-                  Subscribe
+                  {/* Subscribe */}
                 </Link>
                 <LoginLink
                   className={buttonVariants({

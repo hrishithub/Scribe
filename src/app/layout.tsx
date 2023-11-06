@@ -22,27 +22,23 @@ export const metadata: Metadata = {
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <Providers>
+        {/* <CrispProvider /> */}
 
-      <Providers>  
-     
-       <CrispProvider />
-                                        
-      <body  className={cn('min-h-screen font-sans antialiased ',inter.className )}>  
-     
-      <ThemeProvider 
-       attribute="class"
-       defaultTheme="system"
-       enableSystem>
-            <Toaster/>
+        <body
+          className={cn('min-h-screen font-sans antialiased', inter.className)}
+        >
+          <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+            <Toaster />
             <Navbar />
             {children}
-      </ThemeProvider>
-      </body>
-      </Providers>   
+          </ThemeProvider>
+        </body>
+      </Providers>
     </html>
-  )
+  );
 }

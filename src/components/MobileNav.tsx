@@ -64,7 +64,7 @@ const MobileNav = ({ isAuth }: { isAuth: boolean }) => {
                     }
                     className='flex items-center w-full font-semibold'
                     href='/pricing'>
-                    Subscribe
+                    {/* Subscribe */}
                   </Link>
                 </li>
               </>
